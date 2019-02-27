@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 
 exports.run = (bot, message, args) => {
 
-    var prefix = '/';
+    var prefix = 'c!';
     var blackembed = new Discord.RichEmbed() //un embed si tu sais pas ce que c'est ツ
     .setColor("RANDOM")
     .setTitle("<a:BanHammer:518450308116905997> __BLACKLIST__ <a:BanHammer:518450308116905997>")
@@ -54,9 +54,9 @@ exports.run = (bot, message, args) => {
     }
 
     if(getvalueof.bot == true){
-        var checkbot = "<:js:520661601649426444> Bot";
+        var checkbot = "<:513304670244962324:541362659199680513> Bot";
     } else {
-        var checkbot = "<a:blobjoining:507491465010741258> Humain";
+        var checkbot = "<:513304670244962324:541362659199680513> Humain";
     }
 
 
@@ -100,17 +100,17 @@ exports.run = (bot, message, args) => {
         .setThumbnail(mentionnedbot.displayAvatarURL)
         .addField('👤 Pseudo', `${mentionnedbot}`, true)
         .addField('👥 #', `#${mentionnedbot.discriminator}`, true)
-        .addField("<:discordlogo:519947445392769039> Nickname" , nickname, true)
+        .addField("<:3389_coolzombie:550389818677526532> Nickname" , nickname, true)
         .addField('✏️ ID', `${mentionned.id}`, true)
-        .addField("<:Yes:519577199364407299> Verification", `${mentionnedbot.verified}`, true)
+        .addField("<:7384_mindblown:550390141538140190> Verification", `${mentionnedbot.verified}`, true)
         .addField('🕵 Type', checkbot, true)
         .addField('🔘 Status', status, true)
         .addField('🎮 Jeu', `${mentionned.presence.game ? `${mentionned.presence.game.name}` : "Ne joue à rien"}`, true)
         .addField(`Rôle(s) [${mentionned.roles.size - 1} rôle(s)]`, `- ${mentionned.roles.array().map(g => g).join('\n- ')}`, true)
         .addField('<a:update:507488468084195328> Rôle le plus élevé', mentionned.highestRole, true)
         .addField('🚪 Arrivée sur le serveur', moment(mentionned.joinedAt).format('Do MMMM YYYY, LTS'), true)
-        .addField('<a:success:507492479881314314> Compte créé le', moment(mentionnedbot.createdAt).format('Do MMMM YYYY, LTS'), true)
-        .addField("<:Gears:520661602488418309> Dernier Membre", dernierMembre, true)
+        .addField('<:6125_anonymous_logo:550390605071777792> Compte créé le', moment(mentionnedbot.createdAt).format('Do MMMM YYYY, LTS'), true)
+        .addField("<a:9395_tmeow9:550390939600945165> Dernier Membre", dernierMembre, true)
         .addField('⭕ Kickable', `${message.member.hasPermission("KICK_MEMBERS") ? "Oui" : "Non"}`, true)
         .addField('⭕ Bannable', `${message.member.hasPermission("BAN_MEMBERS") ? "Oui" : "Non"}`, true)
         .addBlankField()

@@ -2,13 +2,13 @@ const Discord = require('discord.js');
 
 exports.run = (bot, message) => {
 
-  var prefix = 'f!';
+  var prefix = 'c!';
   var blackembed = new Discord.RichEmbed() //un embed si tu sais pas ce que c'est ツ
   .setColor("RANDOM")
   .setTitle("<a:BanHammer:518450308116905997> __BLACKLIST__ <a:BanHammer:518450308116905997>")
   .setThumbnail(`https://cdn2.iconfinder.com/data/icons/financial-circle/512/risk_management-512.png`)
   .addField("<a:Chest:507492479243780116> **__Vous ne pouvez pas m'utiliser car vous êtes banni du bot__** <a:Chest:507492479243780116>", "Pour faire une demande de débannissement, contacté Majesty#1710 ! ou rendez vous sur le [Discord Support](https://discord.gg/KD4G5Ny)")
-  .addField("**<:barre:527852079503376384> __POUR LE STAFFS SERVEUR__**", `Nous vous conseillons de bannir cette personne de votre serveur car il est présent dans la blacklist des commandes (généralement pour une raison grave, exemple : tente de bypass les permissions du bot, ou envoie des insultes en message privé au bot (support)) Libre a vous de prendre votre choix.`)
+  .addField("**<a:Loading:541658541837123605> __POUR LE STAFFS SERVEUR__**", `Nous vous conseillons de bannir cette personne de votre serveur car il est présent dans la blacklist des commandes (généralement pour une raison grave, exemple : tente de bypass les permissions du bot, ou envoie des insultes en message privé au bot (support)) Libre a vous de prendre votre choix.`)
   .setImage("https://upload.wikimedia.org/wikipedia/fr/b/bf/The-Blacklist-logo.png") //image de panneau blacklisté
   .setFooter("Pour demander un Blacklist, Envoyé un message privé a Framboise avec l'ID, le pseudo et le lien d'un screen.", bot.user.avatarURL)
   
@@ -46,16 +46,16 @@ exports.run = (bot, message) => {
      .setFooter(`Serveur créer le • ${day}.${month}.${year}`)
      .setColor("#7289DA")
      .setThumbnail(sicon)
-     .addField("<:barre:527852079503376384>  ID", message.guild.id, true)
-     .addField("<:barre:527852079503376384>  Nom du serveur", message.guild.name, true)
-     .addField("<:barre:527852079503376384>  Créateur", message.guild.owner.user.tag, true)
-     .addField("<:barre:527852079503376384>  Region", message.guild.region, true)
-     .addField("<:barre:527852079503376384>  Channels", message.guild.channels.size, true)
-     .addField("<:barre:527852079503376384>  Membres", message.guild.memberCount, true)
-     .addField("<:barre:527852079503376384>  Humains", message.guild.memberCount - message.guild.members.filter(m => m.user.bot).size, true)
-     .addField("<:barre:527852079503376384>  Bots", message.guild.members.filter(m => m.user.bot).size, true)
-     .addField("<:online:507488297266970625>  En Ligne", online.size, true)
-     .addField("<:barre:527852079503376384>  Rôles", message.guild.roles.size, true);
+     .addField("<a:Loading:541658541837123605>  ID", message.guild.id, true)
+     .addField("<a:Loading:541658541837123605>  Nom du serveur", message.guild.name, true)
+     .addField("<a:Loading:541658541837123605>  Créateur", message.guild.owner.user.tag, true)
+     .addField("<a:Loading:541658541837123605>  Region", message.guild.region, true)
+     .addField("<a:Loading:541658541837123605>  Channels", message.guild.channels.size, true)
+     .addField("<a:Loading:541658541837123605>  Membres", message.guild.memberCount, true)
+     .addField("<a:Loading:541658541837123605>  Humains", message.guild.memberCount - message.guild.members.filter(m => m.user.bot).size, true)
+     .addField("<a:Loading:541658541837123605>  Bots", message.guild.members.filter(m => m.user.bot).size, true)
+     .addField("<:nuke:550393322800283658> En Ligne", online.size, true)
+     .addField("<a:Loading:541658541837123605>  Rôles", message.guild.roles.size, true);
      message.channel.send(serverembed);
   
   }

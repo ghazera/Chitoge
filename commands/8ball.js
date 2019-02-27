@@ -39,7 +39,7 @@ exports.run = async (bot, message, [args]) => {
 
 
 
-    let response = ["Oui", "peut-être", "Non", "Réessaye plus tard **(Non je ne bug pas)**", "Possible", "Absolument", "Peut-être que non", "Le résultat est beau", "Le résultat n'est pas beau", "Tu fais pitié KappaPride", `Ah désolé, ça ne va pas être possible.`, "La n'est pas le problème, mon cher", "HAHAHA! excellente blague", `Être ou ne pas être, telle est la question`, "Je pense, donc je suis Descartes", "**Just do it !**", `Moi aussi je pense à toi`];
+    let response = ["Oui", "peut-être", "Non", "Réessaye plus tard **(Non je ne bug pas)**", "Possible", "Absolument", "Peut-être que non", "Le résultat est beau", "Le résultat n'est pas beau", "Tu fais pitié", `Ah désolé, ça ne va pas être possible.`, "La n'est pas le problème, mon cher", "HAHAHA! excellente blague", `Être ou ne pas être, telle est la question`, "Je pense, donc je suis Descartes", "**Just do it !**","Non.", "Je ne peux pas repondre à cette question !" `Moi aussi je pense à toi`];
 
     message.channel.send(`${response[~~(Math.random() * response.length)]}, ${message.author.username}.`);    
 };

@@ -41,7 +41,7 @@ exports.run = async (anko, message, args, color, bot) => {
   message.channel.createInvite({maxAge: 0}).then(invite => {
     let embed = new Discord.RichEmbed()
     .setColor(color)
-    .setDescription(`<a:Loading:541658541837123605>__**LIEN PERMANENT**__: ${invite}`);
+    .setDescription(`<a:Loading:541658541837123605>__**LIEN PERMANENT**__: "https://discord.gg/mnUAWC2"`);
     message.channel.send(embed);
   });
 }

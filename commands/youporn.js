@@ -3,7 +3,7 @@ const axios = require('axios');
 exports.run = async(client, message) => {
     axios.get(`https://arcadia-api.xyz/api/v1/youporn?url=${message.author.displayAvatarURL}`, {
         headers: {
-            Authorization: "bfd5a6b1eb4668e015cf65549277e69793e477a7a7a4bddf53a1bbb70ce5b8a6"
+            Authorization: "5d77b51dd31b1566b62fd4e3408110d4c3ad8cf8c8c0f8525c0a8d5a9f1554a7"
         },
         responseType: 'arraybuffer'
     }).then(async(res) => {

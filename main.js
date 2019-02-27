@@ -50,9 +50,9 @@ fs.readdir('./events/', (err, files) => {
 bot.on('ready', function() {
   setInterval(async () => {
 const statuslist = [
-  `f!help | ${bot.guilds.size} Serveurs`,
-  `f!help | ${bot.channels.size} Channels`,
-  `f!help | ${bot.users.size} Utilisateurs`
+  `c!help | ${bot.guilds.size} Serveurs`,
+  `c!help | ${bot.channels.size} Channels`,
+  `c!help | ${bot.users.size} Utilisateurs`
 ];
 const random = Math.floor(Math.random() * statuslist.length);
 
@@ -60,7 +60,7 @@ try {
   await bot.user.setPresence({
     game: {
       name: `${statuslist[random]}`,
-      url : "https://www.twitch.tv/zertybot"
+      url : "https://www.twitch.tv/chitogebot"
     },
     status: "online"
   });
@@ -83,9 +83,9 @@ bot.on(`message`, async message => {
             let recruteEmbed = new Discord.RichEmbed()
                 .setTitle(`<a:success:507492479881314314> __L'EQUIPE FRAMBOISE RECRUTE__ ! <a:success:507492479881314314>`)
                 .setColor('RANDOM')
-                .setDescription(`[Tu as reçu ce message car tu est dans un serveur ou est le bot Framboise] STAFFS DU BOT **Framboise** ! Nous sommes a la recherche de community manager, de staffs support pour répondre au tickets et de modérateurs pour le bot, RDV sur notre Discord ci-dessous pour plus d'infos`)
-                .addField("https://discord.gg/KD4G5Ny")
-                .addField("*:link: Invite moi dans ton serveur <a:success:507492479881314314> :*", "[Inviter Framboise](https://discordapp.com/oauth2/authorize?client_id=488391721227649024&scope=bot&permissions=2146958847)");
+                .setDescription(`[Tu as reçu ce message car tu est dans un serveur ou est le bot Chitoge] STAFFS DU BOT **Chitoge** ! Nous sommes a la recherche de community manager, de staffs support pour répondre au tickets et de modérateurs pour le bot, RDV sur notre Discord ci-dessous pour plus d'infos`)
+                .addField("https://discord.gg/dzTHvYn")
+                .addField("*:link: Invite moi dans ton serveur <a:success:507492479881314314> :*", "[Inviter Chitoge](https://discordapp.com/oauth2/authorize?client_id=488391721227649024&scope=bot&permissions=2146958847)");
             m.send({embed: recruteEmbed})
         })
     }
@@ -433,8 +433,8 @@ function play(guild, song) {
 ◄◄⠀▐▐ ⠀►►⠀⠀　　${volval}    　　 :gear: ❐ ⊏⊐ 
 ========================================================= `)
    .setFooter("Tu veux une musique de qualité ?")
-.addField("Discord Officiel","https://discord.gg/KD4G5Ny")
-    .addField("Invite moi dans ton serveur <:Update:540196592100179979>","**Framboise**: [Clique ici](https://discordapp.com/oauth2/authorize?client_id=488391721227649024&scope=bot&permissions=2146958847)");
+.addField("Discord Officiel","https://discord.gg/kwCG3b3")
+    .addField("Invite moi dans ton serveur <:503941083424882718:541659459139928065>","**Chitoge**: [Clique ici](https://discordapp.com/api/oauth2/authorize?client_id=532599437252493333&permissions=8&scope=bot)");
     serverQueue.textChannel.send(NowEmbed);
  
 
@@ -447,14 +447,14 @@ bot.on("guildCreate", async guild => {
     let guildCreateChannel = bot.channels.get('532532626787926037');
     let joinEmbed = new Discord.RichEmbed()
         .setAuthor(`${bot.user.username}`, bot.user.avatarURL)
-        .setTitle("<a:yess:530323967408472065> | __NOUVEAUX SERVEUR OU JE SUIS !__", guild.iconURL)
+        .setTitle("<:513304670244962324:541362659199680513> | __NOUVEAUX SERVEUR OU JE SUIS !__", guild.iconURL)
         .setColor("00FF00")
         .setThumbnail(`https://cdn.pixabay.com/photo/2013/03/29/13/38/clipboard-97590_640.png`)
-        .addField("<:streaming:540196430367817729> | Nom du serveur", guild.name)
-        .addField("<:streaming:540196430367817729> | Propriétaire", guild.owner.user.username + "#" + guild.owner.user.discriminator)
-        .addField("<:streaming:540196430367817729> | Nombres de membres sur ce serveur", guild.memberCount)
-        .addField(`<:streaming:540196430367817729> | Lien du serveur`, `${invite.url}`)
-        .addField("<:streaming:540196430367817729> | ID Serveur", guild.id)
+        .addField("<:DiscordDev:541660934155010069> | Nom du serveur", guild.name)
+        .addField("<:DiscordDev:541660934155010069> | Propriétaire", guild.owner.user.username + "#" + guild.owner.user.discriminator)
+        .addField("<:DiscordDev:541660934155010069> | Nombres de membres sur ce serveur", guild.memberCount)
+        .addField(`<:DiscordDev:541660934155010069> | Lien du serveur`, `${invite.url}`)
+        .addField("<:DiscordDev:541660934155010069> | ID Serveur", guild.id)
         .setFooter("LOGS SERVEURS")
     guildCreateChannel.send(joinEmbed);
 

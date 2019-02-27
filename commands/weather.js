@@ -4,7 +4,7 @@ const weather = require('weather-js');
 module.exports.run = (bot, message, args) => {
 
 
-    var prefix = 'f!';
+    var prefix = 'c!';
     var blackembed = new Discord.RichEmbed() //un embed si tu sais pas ce que c'est ツ
     .setColor("RANDOM")
     .setTitle("<a:BanHammer:518450308116905997> __BLACKLIST__ <a:BanHammer:518450308116905997>")
@@ -42,7 +42,7 @@ module.exports.run = (bot, message, args) => {
   weather.find({search: args.join(" "), degreeType: 'C'}, function(err, result) {
       if (err) message.channel.send(err);
       if (result === undefined || result.length === 0) {
-          message.channel.send("**S'il vous plaît entrer un emplacement!**")
+          message.channel.send("**S'il vous plaît entrez un emplacement!**")
           return;
       }
       var current = result[0].current;
@@ -53,7 +53,7 @@ module.exports.run = (bot, message, args) => {
           .setThumbnail(current.imageUrl)
           .setColor(0x00AE86)
           .addField('Timezone',`UTC${location.timezone}`, true)
-          .addField('Degree Type',location.degreetype, true)
+          .addField('Type de degrée',location.degreetype, true)
           .addField('Temperature',`${current.temperature} Degrés`, true)
           .addField('Se sent comme', `${current.feelslike} Degrés`, true)
           .addField('Les vents',current.winddisplay, true)
